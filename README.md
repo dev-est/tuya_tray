@@ -1,11 +1,11 @@
 # Tuya Tray
 
-Tuya Tiktok is an application utilising the Tuya API to automatically create a taskbar application to control SmartLife/Tuya lights.
+Tuya Tray is an application utilising the Tuya API to automatically create a taskbar application to control SmartLife/Tuya lights.
 
 
 ### Installation
 
-TuyaTikTok requires [Python 3](https://www.python.org/downloads/) to run.
+Tuya Tray requires [Python 3](https://www.python.org/downloads/) to run.
 
 Install the requirements and run the script.
 

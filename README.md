@@ -13,6 +13,12 @@ Install the requirements and run the script.
 $ pip install -r requirements.txt
 $ python tuya-tray.py
 ```
+### In Action!
+
+![Gif](https://i.imgur.com/jM0mK28.gif)
+
+
+
 
 
 ### Todos

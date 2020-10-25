@@ -26,7 +26,6 @@ def main():
     menu = QMenu()
 
     menus = dict()
-    buttons = dict()
     for j in (devices.keys()):
         menus[f"{j}_Action"] = menu.addMenu(j)
         menus[f"{j}_Action"].addAction('On')

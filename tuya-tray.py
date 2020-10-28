@@ -13,9 +13,9 @@ def turn_off(device):
     return device.turn_off()
 
 def main():
-    api.init(os.getenv('TUYA_LOGIN'),os.getenv('TUYA_PASSWORD'),"44","tuya")
+    api.init('LOGIN','PASSWORD',"44","tuya")
     device_id = api.get_all_devices()
-    devices = dict((i.name(),i) for i in device_id if i.obj_type == 'light')
+    devices = dict((i.name(),i) for i in device_id if i.obj_type == 'light' or i.obj_type == 'switch')
 
     app = QApplication(sys.argv)
 

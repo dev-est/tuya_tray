@@ -13,10 +13,20 @@ Install the requirements and run the script.
 $ pip install -r requirements.txt
 $ python tuya-tray.py
 ```
-You will also need to alter the code in regards to the country code as well as the application you're using ('tuya' for tuya users and 'smart_life' for smart life users)
+
+Some users (macOS users) may also need to install the following:
 
 ```sh
-api.init(os.getenv('TUYA_LOGIN'),os.getenv('TUYA_PASSWORD'),"44","tuya")
+$ pip install requests
+```
+
+You will also need to alter line 16 of the code (shown below) with:
+ 1. Your Tuya/SmartLife login and password (e.g replace 'LOGIN' with 'example@example.com')
+ 2. Your country code ("44" for UK users, "1" for US/Canadian users, etc)
+ 3. The application you're using ('tuya' for tuya users and 'smart_life' for smart life users)
+
+```sh
+api.init('LOGIN','PASSWORD',"44","tuya")
 ```
 ### In Action!
 

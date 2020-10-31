@@ -19,8 +19,8 @@ You will also need to alter the config.json file with the following:
  2. Your country code ("44" for UK users, "1" for US/Canadian users, etc)
  3. The application you're using ('tuya' for tuya users and 'smart_life' for smart life users)
 
-```sh
-api.init('LOGIN','PASSWORD',"44","tuya")
+```
+{"username":"example@domain.com","password":"YOURPASS","country_code":"44","application":"tuya"}
 ```
 ### In Action!
 

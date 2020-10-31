@@ -5,6 +5,8 @@ from tuyapy import TuyaApi
 import os
 import time
 from functools import partial
+import json
+
 api = TuyaApi()
 
 class tray():
@@ -29,14 +31,18 @@ class tray():
     
     def initUI(self):
         self.app = QApplication(sys.argv)
-        api.init('LOGIN','PASSWORD',"44","tuya")
+        with open('config.json') as config:
+            data = json.load(config)
+        username,password,country_code,application = data['username'],data['password'],data['country_code'],data['application']
+        api.init(username,password,country_code,application)
         self.device_ids = api.get_all_devices()
         self.switch = dict(sorted(dict((i.name(),i) for i in self.device_ids if i.obj_type == 'switch').items()))
+        self.switch['All Switches'] = list(self.switch.values())
         self.lights = dict(sorted(dict((i.name(),i) for i in self.device_ids if i.obj_type == 'light').items()))
-        self.devices = {**self.switch, **self.lights}
+        self.devices = {**self.switch,**self.lights}
         self.devices['All Lights'] = list(self.lights.values())
         self.tray_icon = QSystemTrayIcon(QIcon('lightbulb.png'),parent=self.app)
-        self.tray_icon.setToolTip('Tuya - Lights')
+        self.tray_icon.setToolTip('Tray - Lights')
         self.menu = QMenu()
         self.menus = dict()
         self.buttons = dict()

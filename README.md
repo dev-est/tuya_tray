@@ -24,7 +24,7 @@ You will also need to alter the config.json file with the following:
 ```
 ### In Action!
 
-![Gif](https://i.imgur.com/jM0mK28.gif)
+![Gif](https://i.imgur.com/YdeAgh4.gif)
 
 
 

@@ -1,7 +1,7 @@
 import sys
-from PyQt5.QtWidgets import QApplication,QSystemTrayIcon,QMenu,QColorDialog
-from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QCoreApplication
+from PyQt6.QtWidgets import QApplication, QSystemTrayIcon, QMenu, QColorDialog
+from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import QCoreApplication
 from tuyapy import TuyaApi
 import os
 import time
@@ -91,4 +91,4 @@ if __name__ == "__main__":
         app = QApplication(sys.argv)
     app.setQuitOnLastWindowClosed(False)
     tray = SystemTrayIcon()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
